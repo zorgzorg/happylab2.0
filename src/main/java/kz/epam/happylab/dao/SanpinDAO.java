@@ -41,7 +41,7 @@ public class SanpinDAO implements DAO<Sanpin> {
         stmt.close();
     }
 
-    private PreparedStatement prepareStatement(PreparedStatement stmt, Sanpin sanpin) throws SQLException {
+    private void prepareStatement(PreparedStatement stmt, Sanpin sanpin) throws SQLException {
         stmt.setInt(1, sanpin.getProbeId());
         stmt.setDate(2, (Date) sanpin.getDate());
         stmt.setInt(3, sanpin.getEmployeeId());
@@ -105,7 +105,5 @@ public class SanpinDAO implements DAO<Sanpin> {
         stmt.setDouble(61, sanpin.getRadioactivityB());
         stmt.setDouble(62, sanpin.getPolyphosphate());
         stmt.setDouble(63, sanpin.getMercury());
-
-        return stmt;
     }
 }

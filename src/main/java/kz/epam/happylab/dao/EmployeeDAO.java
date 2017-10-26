@@ -45,7 +45,7 @@ public class EmployeeDAO implements DAO<Employee> {
         stmt.close();
     }
 
-    private PreparedStatement prepareStatement(PreparedStatement stmt, Employee employee) throws SQLException {
+    private void prepareStatement(PreparedStatement stmt, Employee employee) throws SQLException {
         stmt.setString(1, employee.getLastname());
         stmt.setString(2, employee.getName());
         stmt.setString(3, employee.getSurname());
@@ -53,8 +53,6 @@ public class EmployeeDAO implements DAO<Employee> {
         stmt.setInt(5, employee.getAssistant());
         stmt.setInt(6, employee.getSignature());
         stmt.setString(7, employee.getRemark());
-
-        return stmt;
     }
 
     public void updateAssistant(Employee employee) throws SQLException {
@@ -65,7 +63,7 @@ public class EmployeeDAO implements DAO<Employee> {
         stmt.close();
     }
 
-    public void deleteSignature() throws SQLException {
+    private void deleteSignature() throws SQLException {
         PreparedStatement stmt = connection.prepareStatement(QueryGetter.getQuery(DELETE_SIGNATURE, EMPLOYEE));
         stmt.executeUpdate();
         stmt.close();

@@ -44,11 +44,9 @@ public class CustomerDAO implements DAO<Customer> {
         stmt.close();
     }
 
-    private PreparedStatement prepareStatement(PreparedStatement stmt, Customer customer) throws SQLException {
+    private void prepareStatement(PreparedStatement stmt, Customer customer) throws SQLException {
         stmt.setString(1, customer.getName());
         stmt.setString(2, customer.getCity());
         stmt.setString(3, customer.getRemark());
-
-        return stmt;
     }
 }

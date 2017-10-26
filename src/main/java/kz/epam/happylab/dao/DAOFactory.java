@@ -14,6 +14,10 @@ public class DAOFactory {
     public static DAO createDAO(Connection connection, String option){
         DAO dao = new UserDAO(connection);
 
+        if(option == null || option.isEmpty()){
+            return dao;
+        }
+
         try {
             DAOType daoType = DAOType.valueOf(option.toUpperCase());
             dao = daoType.create(connection);

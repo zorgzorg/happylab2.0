@@ -41,10 +41,8 @@ public class PositionDAO implements DAO<Position> {
         stmt.close();
     }
 
-    private PreparedStatement prepareStatement(PreparedStatement stmt, Position position) throws SQLException {
+    private void prepareStatement(PreparedStatement stmt, Position position) throws SQLException {
         stmt.setString(1, position.getPosition());
         stmt.setString(2, position.getRemark());
-
-        return stmt;
     }
 }

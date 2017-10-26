@@ -41,7 +41,7 @@ public class ProbeDAO implements DAO<Probe> {
         stmt.close();
     }
 
-    private PreparedStatement prepareStatement(PreparedStatement stmt, Probe probe) throws SQLException {
+    private void prepareStatement(PreparedStatement stmt, Probe probe) throws SQLException {
         stmt.setInt(1, probe.getOrderId());
         stmt.setInt(2, probe.getNumberLab());
         stmt.setInt(3, probe.getNumberCustomer());
@@ -49,7 +49,5 @@ public class ProbeDAO implements DAO<Probe> {
         stmt.setString(5, probe.getPointSampling());
         stmt.setDate(6, (Date) probe.getDateSampling());
         stmt.setString(7, probe.getRemark());
-
-        return stmt;
     }
 }

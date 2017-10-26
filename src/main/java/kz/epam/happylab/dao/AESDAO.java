@@ -40,7 +40,7 @@ public class AESDAO implements DAO<AES> {
         stmt.close();
     }
 
-    private PreparedStatement prepareStatement(PreparedStatement stmt, AES aes) throws SQLException {
+    private void prepareStatement(PreparedStatement stmt, AES aes) throws SQLException {
         stmt.setInt(1, aes.getProbeId());
         stmt.setDate(2, (Date) aes.getDate());
         stmt.setInt(3, aes.getEmployeeId());
@@ -77,7 +77,5 @@ public class AESDAO implements DAO<AES> {
         stmt.setDouble(34, aes.getVanadium());
         stmt.setDouble(35, aes.getTungsten());
         stmt.setDouble(36, aes.getZinc());
-
-        return stmt;
     }
 }

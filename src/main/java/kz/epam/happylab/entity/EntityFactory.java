@@ -10,7 +10,11 @@ public class EntityFactory {
     private final static Logger logger = Logger.getLogger(ActionFactory.class);
 
     public static Entity createEntity(String option){
-        Entity entity = new User();
+        Entity entity = new Entity();
+
+        if(option == null || option.isEmpty()){
+            return entity;
+        }
 
         try {
             EntityType entityType = EntityType.valueOf(option.toUpperCase());

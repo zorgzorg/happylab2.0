@@ -41,12 +41,10 @@ public class OrderDAO implements DAO<Order> {
         stmt.close();
     }
 
-    private PreparedStatement prepareStatement(PreparedStatement stmt, Order order) throws SQLException {
+    private void prepareStatement(PreparedStatement stmt, Order order) throws SQLException {
         stmt.setString(1, order.getNumber());
         stmt.setInt(2, order.getCustomerId());
         stmt.setDate(3, (Date) order.getDate());
         stmt.setString(4, order.getRemark());
-
-        return stmt;
     }
 }

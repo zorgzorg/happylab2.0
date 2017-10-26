@@ -42,7 +42,6 @@ public class AES extends Journal {
     }
 
     public AES init(ResultSet rs) throws SQLException {
-
         AES journal = (AES) new Journal().create(rs, new AES());
         journal.setCalcium(rs.getDouble(Element.CALCIUM.toString()));
         journal.setPotassium(rs.getDouble(Element.POTASSIUM.toString()));

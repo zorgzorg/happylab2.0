@@ -40,7 +40,7 @@ public class SSADAO implements DAO<SSA> {
         stmt.close();
     }
 
-    private PreparedStatement prepareStatement(PreparedStatement stmt, SSA ssa) throws SQLException {
+    private void prepareStatement(PreparedStatement stmt, SSA ssa) throws SQLException {
         stmt.setInt(1, ssa.getProbeId());
         stmt.setDate(2, (Date) ssa.getDate());
         stmt.setInt(3, ssa.getEmployeeId());
@@ -87,7 +87,5 @@ public class SSADAO implements DAO<SSA> {
         stmt.setDouble(44, ssa.getYtterbium());
         stmt.setDouble(45, ssa.getZinc());
         stmt.setDouble(46, ssa.getZirconium());
-
-        return stmt;
     }
 }

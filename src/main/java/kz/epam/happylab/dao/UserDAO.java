@@ -38,7 +38,7 @@ public class UserDAO implements DAO<User> {
         stmt.close();
     }
 
-    private PreparedStatement prepareStatement(PreparedStatement stmt, User user) throws SQLException {
+    private void prepareStatement(PreparedStatement stmt, User user) throws SQLException {
         stmt.setString(1, user.getName());
         stmt.setString(2, user.getUsername());
         stmt.setString(3, user.getEmail());
@@ -47,8 +47,6 @@ public class UserDAO implements DAO<User> {
         stmt.setDate(6, (Date) user.getDateRegistration());
         stmt.setInt(7, user.getBlock());
         stmt.setString(8, user.getRemark());
-
-        return stmt;
     }
 
     public void updateProfile(User user) throws SQLException {
