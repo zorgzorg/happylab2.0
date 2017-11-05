@@ -113,10 +113,8 @@
     <t:inputDoubleTranslate label="radioactivityA" name="radioactivityA" value="${data.radioactivityA}" />
     <t:inputDoubleTranslate label="radioactivityB" name="radioactivityB" value="${data.radioactivityB}" />
     <t:inputDoubleTranslate label="polyphosphate" name="polyphosphate" value="${data.polyphosphate}" />
-    <button class="btn btn-primary btn-md" type="submit" name="action" value="apply"><fmt:message key="apply" bundle="${content}"/></button>
-    <button class="btn btn-primary btn-md" type="submit" name="action" value="save"><fmt:message key="save" bundle="${content}"/></button>
-    <button class="btn btn-primary btn-md" type="reset"><fmt:message key="reset" bundle="${content}"/></button>
-    <button class="btn btn-primary btn-md" type="cancel"><fmt:message key="cancel" bundle="${content}"/></button>
+    </br>
+    <t:buttonApplySaveCancel />
     <input type="hidden" name="recordId" value="${data.id}"/>
     <input type="hidden" name="option" value ="sanpin">
 </form>
