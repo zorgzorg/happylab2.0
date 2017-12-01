@@ -68,10 +68,7 @@
         <label for="remark" class="control-label col-xs-5"><fmt:message key="remark" bundle="${content}"/></label>
         <textarea name="remark" id="remark" cols="50" rows="5" class="form-control">${data.remark}</textarea>
         </br>
-        <button class="btn btn-primary btn-md" type="submit" value="apply" name="action"><fmt:message key="apply" bundle="${content}"/></button>
-        <button class="btn btn-primary btn-md" type="submit" value="save" name="action"><fmt:message key="save" bundle="${content}"/></button>
-        <button class="btn btn-primary btn-md" type="reset"><fmt:message key="reset" bundle="${content}"/></button>
-        <button class="btn btn-primary btn-md" type="cancel"><fmt:message key="cancel" bundle="${content}"/></button>
+        <t:buttonApplySaveCancel />
         <input type="hidden" name="option" value ="user">
         <input type="hidden" name="recordId" value="${data.id}"/>
     </div>

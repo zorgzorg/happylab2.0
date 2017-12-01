@@ -28,10 +28,7 @@
             placeholder="email" oninvalid="this.setCustomValidity('<fmt:message key='enter_valid_email' bundle='${content}'/>')"
             oninput="setCustomValidity('')" required/>
             <br />
-            <button class="btn btn-primary btn-md" type="submit" value="apply" name="action"><fmt:message key="apply" bundle="${content}"/></button>
-            <button class="btn btn-primary btn-md" type="submit" value="save" name="action"><fmt:message key="save" bundle="${content}"/></button>
-            <button class="btn btn-primary btn-md" type="reset"><fmt:message key="reset" bundle="${content}"/></button>
-            <button class="btn btn-primary btn-md" type="cancel"><fmt:message key="cancel" bundle="${content}"/></button>
+            <t:buttonApplySaveCancel />
             <input type="hidden" name="option" value ="profile">
             <input type="hidden" name="userId" value="${user.id}"/>
         </div>

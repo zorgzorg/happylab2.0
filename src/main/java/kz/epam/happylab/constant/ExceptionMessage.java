@@ -1,6 +1,6 @@
 package kz.epam.happylab.constant;
 
-public class ExceptionMessage {
+public final class ExceptionMessage {
     public static final String EXCEPTION_FIND_RECORDS = "Failed selecting records from db";
     public static final String EXCEPTION_FIND_RECORD = "Failed selecting record from db by its id";
     public static final String EXCEPTION_DELETE_RECORD = "Failed deleting record from db by its id";
@@ -14,4 +14,7 @@ public class ExceptionMessage {
     public static final String EXCEPTION_RELEASE_CONNECTION = "Failed releasing connection";
     public static final String EXCEPTION_WRONG_ACTION = "Failed wrong action";
     public static final String EXCEPTION_WRONG_OPTION = "Failed wrong option";
+
+    private ExceptionMessage() {
+    }
 }

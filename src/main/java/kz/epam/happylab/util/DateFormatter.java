@@ -11,7 +11,6 @@ import static kz.epam.happylab.constant.Common.*;
 public class DateFormatter {
     private final static Logger logger = Logger.getLogger(DateFormatter.class);
 
-
     public static String formatDate(String date)
     {
         String pattern = RU_FORMAT_DATE;
